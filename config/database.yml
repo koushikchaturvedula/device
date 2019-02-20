@@ -27,5 +27,5 @@ test:
 
 production:
   <<: *default
-  host: aqueous-cove-58539
+  host: aqueous-cove-58539.herokuapp
   database: db/production.sqlite3
