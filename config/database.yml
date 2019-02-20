@@ -10,11 +10,11 @@ default: &default
   pool: 5
   username: me
   password: koushikch123   ### password you have specified within psql
-  host: localhost
   port: 5432
 
 development:
   <<: *default
+  host: localhost
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -22,8 +22,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: localhost
   database: db/test.sqlite3
 
 production:
   <<: *default
+  host: aqueous-cove-58539
   database: db/production.sqlite3
